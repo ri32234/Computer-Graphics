@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2 - Vector Laboratory</title>
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        #panel {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            width: 290px;
+            max-height: calc(100vh - 50px);
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+
+        h3 {
+            margin: 5px 0 10px;
+        }
+
+        .inputs {
+            display: flex;
+            gap: 5px;
+            margin: 8px 0;
+        }
+
+        input {
+            width: 33.33%;
+            min-width: 0;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+
+        #results,
+        #challengeResults {
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+        }
+
+        #challengeResults {
+            font-size: 13px;
+        }
+
+        .vector-a {
+            color: red;
+        }
+
+        .vector-b {
+            color: blue;
+        }
+
+        .vector-sum {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="panel">
+        <h3>Vector Laboratory</h3>
+
+        <strong>Vector a (x, y, z)</strong>
+        <div class="inputs">
+            <input id="ax" type="number" value="3" step="1" aria-label="a x">
+            <input id="ay" type="number" value="4" step="1" aria-label="a y">
+            <input id="az" type="number" value="0" step="1" aria-label="a z">
+        </div>
+
+        <strong>Vector b (x, y, z)</strong>
+        <div class="inputs">
+            <input id="bx" type="number" value="1" step="1" aria-label="b x">
+            <input id="by" type="number" value="0" step="1" aria-label="b y">
+            <input id="bz" type="number" value="0" step="1" aria-label="b z">
+        </div>
+
+        <div id="results"></div>
+        <div id="challengeResults"></div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+
+</body>
+</html>
